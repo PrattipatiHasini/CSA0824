@@ -1,0 +1,20 @@
+#simple program to multiply 3 matrices
+A=[[1,1,1],[2,2,2],[3,3,3]]
+B=[[1,1,1],[2,2,2],[3,3,3]]
+C=[[1,1,1],[2,2,2],[3,3,3]]
+#multiply A and B
+AB=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(3):
+    for j in range(3):
+      for k in range(3):
+          AB[i][j]+=A[i][k]*B[k][j]
+#multiply (A*B) with c
+ABC=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(3):
+    for j in range(3):
+        for k in range(3):
+            ABC[i][j]+=AB[i][k]*C[k][j]
+#display result
+print("result of A*B*C:")
+for row in ABC:
+    print(row)
